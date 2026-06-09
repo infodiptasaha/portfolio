@@ -1,5 +1,6 @@
 import { Award, Target, TrendingUp, CheckCircle, Smartphone, Database, ShieldCheck, BarChart3, Users } from 'lucide-react'
 
+// --- Data Stays Identical ---
 const corePillars = [
   {
     title: 'DMS Product Evolution',
@@ -35,11 +36,12 @@ const recentMilestones = [
   'Eliminating operational bottlenecks to optimize field-force performance metrics'
 ]
 
+// --- Component Updated ---
 export function AboutSection() {
   return (
-    <section id="about" className="section-padding py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="section-padding py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
+        {/* Header (Kept Same) */}
         <div className="text-center mb-16">
           <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-widest">
             Who I Am
@@ -47,26 +49,36 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mt-2">
             About <span className="text-blue-600 dark:text-blue-400">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1 bg-blue-600 dark:bg-blue-500 mx-auto mt-4 rounded-full" />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Side: Visual Profile Card */}
+          {/* Left Side: Refined Visual Profile Card */}
           <div className="relative flex justify-center lg:sticky lg:top-24">
             <div className="relative w-80 h-80">
-              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#032D60] via-[#0176D3] to-[#1B96FF] flex items-center justify-center shadow-2xl">
-                <div className="text-white text-center px-4">
-                  <div className="text-7xl mb-3 animate-bounce">💼</div>
-                  <div className="text-2xl font-bold tracking-tight">Dipta Saha</div>
-                  <div className="text-blue-200 text-sm font-medium mt-1">Digital Transformation Leader</div>
+              {/* Card Body - Softened Gradient & Enhanced Shadow */}
+              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#032d60] via-[#1a56db] to-[#1b96ff] flex items-center justify-center shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]">
+                <div className="text-white text-center px-6">
+                  {/* Replaced Briefcase with Profile Avatar Placeholder */}
+                  <div className="text-7xl mb-4 p-4 rounded-full border-4 border-white/20 inline-block">
+                    👨‍💻
+                  </div>
+                  
+                  {/* Name (Larger & Prominent) */}
+                  <div className="text-3xl md:text-4xl font-extrabold tracking-tight">Dipta Saha</div>
+                  
+                  {/* Professional Title (Stylized for Readability) */}
+                  <div className="mt-2 text-sm font-semibold tracking-wide text-blue-100/90 uppercase [word-spacing:0.25em]">
+                    Digital Transformation Leader
+                  </div>
                 </div>
               </div>
               
               {/* Floating badge – Focus area */}
-              <div className="absolute -right-6 top-8 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-gray-100 dark:border-gray-700 max-w-[160px]">
+              <div className="absolute -right-6 top-8 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-2xl border border-gray-100 dark:border-gray-700 max-w-[160px] transition-colors duration-300">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex-shrink-0">
-                    <Target className="text-blue-600" size={20} />
+                  <div className="p-2.5 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex-shrink-0">
+                    <Target className="text-blue-600 dark:text-blue-400" size={20} />
                   </div>
                   <div>
                     <div className="font-bold text-gray-900 dark:text-white text-xs leading-tight">Sales Automation</div>
@@ -76,10 +88,10 @@ export function AboutSection() {
               </div>
 
               {/* Floating badge – Domain expertise */}
-              <div className="absolute -left-6 bottom-12 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl border border-gray-100 dark:border-gray-700 max-w-[160px]">
+              <div className="absolute -left-6 bottom-12 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-2xl border border-gray-100 dark:border-gray-700 max-w-[160px] transition-colors duration-300">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-xl flex-shrink-0">
-                    <TrendingUp className="text-green-600" size={20} />
+                  <div className="p-2.5 bg-green-100 dark:bg-green-900/30 rounded-xl flex-shrink-0">
+                    <TrendingUp className="text-green-600 dark:text-green-400" size={20} />
                   </div>
                   <div>
                     <div className="font-bold text-gray-900 dark:text-white text-xs leading-tight">DMS Ecosystem</div>
@@ -90,8 +102,8 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Side: Bio & Content Focus */}
-          <div>
+          {/* Right Side (Content Unchanged but with Dark Mode Transition) */}
+          <div className="transition-opacity duration-300">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Bridging Field Sales Operations & Technical Development
             </h3>
@@ -108,20 +120,20 @@ export function AboutSection() {
             {/* Core Pillars */}
             <div className="mb-8">
               <h4 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2 text-lg">
-                <Award size={20} className="text-blue-600" />
+                <Award size={20} className="text-blue-600 dark:text-blue-500" />
                 Digital Transformation Pillars
               </h4>
               <div className="space-y-4">
                 {corePillars.map((pillar) => {
                   const IconComponent = pillar.icon;
                   return (
-                    <div key={pillar.title} className="flex gap-3 p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 shadow-sm">
-                      <div className="p-2 bg-blue-50 dark:bg-blue-950/40 rounded-lg text-blue-600 dark:text-blue-400 h-9 w-9 flex items-center justify-center flex-shrink-0">
+                    <div key={pillar.title} className="flex gap-3 p-3 rounded-xl bg-white dark:bg-gray-800/60 border border-gray-100 dark:border-gray-800 shadow-sm transition-colors duration-300">
+                      <div className="p-2 bg-blue-50 dark:bg-blue-950/50 rounded-lg text-blue-600 dark:text-blue-400 h-9 w-9 flex items-center justify-center flex-shrink-0">
                         <IconComponent size={18} />
                       </div>
                       <div>
                         <h5 className="font-bold text-sm text-gray-900 dark:text-white">{pillar.title}</h5>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{pillar.desc}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 leading-relaxed">{pillar.desc}</p>
                       </div>
                     </div>
                   )
@@ -132,7 +144,7 @@ export function AboutSection() {
             {/* Strategic Drivers */}
             <div>
               <h4 className="font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2 text-lg">
-                <CheckCircle size={20} className="text-blue-600" />
+                <CheckCircle size={20} className="text-blue-600 dark:text-blue-500" />
                 Strategic Objectives
               </h4>
               <ul className="grid grid-cols-1 gap-2.5">
@@ -141,7 +153,7 @@ export function AboutSection() {
                     key={idx}
                     className="flex items-start gap-2.5 text-sm text-gray-600 dark:text-gray-400"
                   >
-                    <span className="text-blue-600 font-bold mt-0.5 flex-shrink-0">→</span>
+                    <span className="text-blue-600 dark:text-blue-500 font-bold mt-0.5 flex-shrink-0">→</span>
                     <span>{item}</span>
                   </li>
                 ))}
