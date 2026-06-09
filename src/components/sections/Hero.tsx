@@ -91,16 +91,13 @@ export function HeroSection() {
           Digital Transformation Professional
         </h2>
 
-        {/* Description */}
-        <p className="max-w-3xl mx-auto text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed">
-          Architecting intelligent Salesforce solutions with{' '}
-          <strong className="text-white">Apex</strong>,{' '}
-          <strong className="text-white">Flow Builder</strong>, and{' '}
-          <strong className="text-white">Lightning Web Components</strong>. I transform complex
-          business processes into elegant CRM automation that drives measurable growth and
-          system integrations.
-        </p>
-
+{/* Description */}
+<p className="max-w-4xl mx-auto text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed">
+  Digital Transformation leader specializing in <strong className="text-white">Sales Automation</strong> and 
+  <strong className="text-white"> Distribution Management Systems (DMS)</strong>. I bridge the gap between field sales 
+  operations and technical development to replace legacy workflows with <strong className="text-white">agile, data-driven solutions</strong> 
+  that ensure enterprise-level adoption and measurable business growth.
+</p>
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <a
