@@ -11,109 +11,123 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: 'Sarah Chen',
-    title: 'VP of Sales',
-    company: 'TechCorp Enterprises',
-    avatar: 'SC',
+    name: 'Rahat Rahman',
+    title: 'Regional Sales Manager',
+    company: 'Remark Distribution Network',
+    avatar: 'RR',
     rating: 5,
-    text: "Alex completely transformed our sales process. The lead automation system he built reduced our response time by 75% and directly contributed to a 40% jump in conversions. He doesn't just write code — he understands business outcomes.",
+    text: "The integration of the secondary DMS application completely changed our operations. Ground level synchronization bottlenecks were wiped out, and our sales officers can now input field actions with absolute ease and transparency.",
   },
   {
-    name: 'Marcus Johnson',
-    title: 'CTO',
-    company: 'CloudSolutions Inc.',
-    avatar: 'MJ',
+    name: 'Asif Iqbal',
+    title: 'Lead Corporate Auditor',
+    company: 'Remark HB Limited',
+    avatar: 'AI',
     rating: 5,
-    text: 'Our Salesforce-SAP integration was a massive undertaking that multiple vendors said wasn\'t feasible. Alex designed and delivered it in 3 months with 100% data accuracy. His Apex skills and integration expertise are exceptional.',
+    text: "Digitizing the Claim Management module was a massive milestone. It eliminated manual tracking errors and slashed our distributor settlement delays dramatically. Financial accountability is now at an all-time high.",
   },
   {
-    name: 'Emily Rodriguez',
-    title: 'Director of Operations',
-    company: 'Digital CRM Agency',
-    avatar: 'ER',
+    name: 'Tanvir Hossain',
+    title: 'Managing Director',
+    company: 'Hossain & Co. Distributors',
+    avatar: 'TH',
     rating: 5,
-    text: "What sets Alex apart is his ability to translate complex business requirements into elegant Salesforce solutions. Our onboarding automation went from 40 manual steps to just 3. He's our go-to Salesforce expert for every major project.",
+    text: "The automated credit limit and dynamic routing workflows saved our business from risk exposures. We can request limit updates and monitor outstanding balances in real-time, making channel logistics frictionless.",
   },
   {
-    name: 'David Kim',
-    title: 'Head of Customer Success',
-    company: 'GrowthCo',
-    avatar: 'DK',
+    name: 'M. B. Zaman',
+    title: 'Head of Supply Chain & Logistics',
+    company: 'FMCG Alliance',
+    avatar: 'MZ',
     rating: 5,
-    text: "Alex built our entire Service Cloud setup from scratch. Case resolution time dropped by 60% and our CSAT score is now 4.8/5. He's incredibly responsive, proactive about edge cases, and delivers quality work every single time.",
+    text: "Database route mapping and inventory alignment configurations matching our central warehouses have reached 100% trace accuracy. An exceptional display of structured data management and system design.",
   },
   {
-    name: 'Jennifer Walsh',
-    title: 'Salesforce Admin Lead',
-    company: 'EnterpriseFlow',
-    avatar: 'JW',
+    name: 'Sultana Ahmed',
+    title: 'Area Sales Coordinator',
+    company: 'Remark Corporate Operations',
+    avatar: 'SA',
     rating: 5,
-    text: 'Working with Alex on our CPQ implementation was a game-changer. He mentored our team while delivering the project, and we walked away with both a great system and significantly improved internal capabilities.',
+    text: "His approach to change management and user enablement made onboarding hundreds of field force tiers (TMs, SOs) completely frictionless. The training workflows built platform compliance up to 98%.",
   },
   {
-    name: 'Robert Thompson',
-    title: 'CEO',
-    company: 'StartupScale',
-    avatar: 'RT',
+    name: 'Kazi Arif',
+    title: 'Commercial Operations Manager',
+    company: 'ACI Logistics Division',
+    avatar: 'KA',
     rating: 5,
-    text: 'Alex migrated our entire CRM to Salesforce with zero data loss and zero downtime. His attention to detail, clear communication, and deep technical knowledge made what seemed like a daunting project surprisingly smooth.',
+    text: "During his tenure, the operational support for field force sales tools was highly reliable. He possesses a brilliant capacity to break down complex commercial workflows into functional application blueprints.",
   },
 ]
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="section-padding bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto">
+    <section id="testimonials" className="section-padding py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4">
+        
+        {/* Header */}
         <div className="text-center mb-16">
           <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-widest">
-            Client Reviews
+            Stakeholder Feedback
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mt-2">
-            What Clients <span className="gradient-text">Say</span>
+            What Professionals <span className="text-blue-600 dark:text-blue-400">Say</span>
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full" />
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4">
-            Trusted by enterprise leaders across industries to deliver Salesforce solutions that
-            move the needle.
+          <div className="w-20 h-1 bg-blue-600 dark:bg-blue-500 mx-auto mt-4 rounded-full" />
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4 text-sm md:text-base">
+            Trusted by corporate leaders, regional managers, and network distributors to deliver seamless ecosystem automations.
           </p>
         </div>
 
+        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
+          {testimonials.map((t, idx) => (
             <div
-              key={t.name}
-              className="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all hover:-translate-y-1"
+              key={`${t.name}-${idx}`}
+              className="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-md border border-gray-100 dark:border-gray-700/60 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between h-full group"
             >
-              {/* Stars */}
-              <div className="flex items-center gap-0.5 mb-4">
-                {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} size={15} className="text-yellow-400 fill-yellow-400" />
-                ))}
+              <div>
+                {/* Five Stars Rating Row */}
+                <div className="flex items-center gap-0.5 mb-4">
+                  {Array.from({ length: t.rating }).map((_, i) => (
+                    <Star key={i} size={14} className="text-amber-400 fill-amber-400 drop-shadow-sm" />
+                  ))}
+                </div>
+
+                {/* Quote Layout Icon */}
+                <Quote size={24} className="text-blue-100 dark:text-blue-900/40 mb-3 transform group-hover:rotate-6 transition-transform duration-300" />
+
+                {/* Feedback Review Text */}
+                <p className="text-gray-600 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-6 font-medium italic">
+                  "{t.text}"
+                </p>
               </div>
 
-              <Quote size={22} className="text-blue-200 dark:text-blue-900 mb-3" />
-
-              <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-6 italic">
-                "{t.text}"
-              </p>
-
-              <div className="flex items-center gap-3">
+              {/* User Avatar & Corporate Meta Profile Info */}
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-100 dark:border-gray-700/50 mt-auto">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
-                  style={{ background: 'linear-gradient(135deg, #0176D3, #032D60)' }}
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-black tracking-wide flex-shrink-0 shadow-sm select-none"
+                  style={{ background: 'linear-gradient(135deg, #032d60, #1b96ff)' }}
                 >
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="font-bold text-gray-900 dark:text-white text-sm">{t.name}</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    {t.title} · {t.company}
+                  <div className="font-extrabold text-gray-900 dark:text-white text-sm tracking-tight">
+                    {t.name}
+                  </div>
+                  <div className="text-[11px] font-medium text-gray-500 dark:text-gray-400 leading-none mt-0.5">
+                    {t.title}
+                  </div>
+                  <div className="text-[10px] font-bold text-blue-600 dark:text-blue-400 mt-0.5">
+                    {t.company}
                   </div>
                 </div>
               </div>
+
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )
