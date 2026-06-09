@@ -29,8 +29,7 @@ export function Footer() {
               Dipta Saha
             </a>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Salesforce Automation Developer specializing in building intelligent CRM solutions,
-              process automation, and enterprise integrations.
+              Digital Transformation Professional specializing in Sales Automation and Distribution Management Systems (DMS).
             </p>
             <div className="flex gap-3">
               {socialLinks.map(({ icon: Icon, href, label }) => (
