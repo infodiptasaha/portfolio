@@ -9,18 +9,18 @@ const partners: Partner[] = [
   {
     name: 'Rahat Rahman',
     title: 'Regional Sales Manager',
-    company: 'Remark Distribution Network',
+    company: 'Distribution Network',
     avatar: 'RR',
   },
   {
     name: 'Asif Iqbal',
     title: 'Lead Corporate Auditor',
-    company: 'Remark HB Limited',
+    company: 'Syntex Limited',
     avatar: 'AI',
   },
   {
     name: 'Tanvir Hossain',
-    title: 'Managing Director',
+    title: 'Area Sales Director',
     company: 'Hossain & Co. Distributors',
     avatar: 'TH',
   },
@@ -33,13 +33,13 @@ const partners: Partner[] = [
   {
     name: 'Sultana Ahmed',
     title: 'Area Sales Coordinator',
-    company: 'Remark Corporate Operations',
+    company: 'Jaman Corporate Operations',
     avatar: 'SA',
   },
   {
     name: 'Kazi Arif',
     title: 'Commercial Operations Manager',
-    company: 'ACI Logistics Division',
+    company: 'Ritu Logistics Division',
     avatar: 'KA',
   },
 ]
