@@ -86,8 +86,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © 2026 Dipta Saha. All rights reserved. Salesforce is a registered trademark of
-            Salesforce.com, Inc.
+            © 2026 Dipta Saha. All rights reserved.
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
