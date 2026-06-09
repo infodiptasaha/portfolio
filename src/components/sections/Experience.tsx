@@ -2,6 +2,7 @@ import { Calendar, MapPin } from 'lucide-react'
 
 interface Job {
   company: string
+  companyUrl: string
   role: string
   duration: string
   location: string
@@ -13,6 +14,7 @@ interface Job {
 const jobs: Job[] = [
   {
     company: 'Remark HB Limited',
+    companyUrl: 'https://www.us.remarkhb.com',
     role: 'Senior Executive – Remark Sales Automation',
     duration: 'Apr 2026 – Present',
     location: 'Dhaka, Bangladesh',
@@ -23,10 +25,11 @@ const jobs: Job[] = [
       'Driving strategic commercial growth by engineering modern, data-driven sales solutions that eliminate manual operational bottlenecks.',
       'Spearheading core operational metrics across the country focused heavily on Process Digitization, Data Visibility, and Change Management.'
     ],
-    color: '#032d60', // Royal deep blue matching your profile card
+    color: '#032d60',
   },
   {
     company: 'Remark HB Limited',
+    companyUrl: 'https://www.us.remarkhb.com',
     role: 'Executive – Remark Sales Automation',
     duration: 'Feb 2025 – Mar 2026',
     location: 'Dhaka, Bangladesh',
@@ -37,10 +40,11 @@ const jobs: Job[] = [
       'Managed system verification and logistics tracking for distributor market returns, ensuring exact inventory accuracy across central warehouses.',
       'Designed and distributed daily, weekly, and monthly performance dashboards providing top-tier management with actionable analytics.'
     ],
-    color: '#1a56db', // Dynamic corporate blue
+    color: '#1a56db',
   },
   {
     company: 'Remark HB Limited',
+    companyUrl: 'https://www.us.remarkhb.com',
     role: 'Officer – Remark Sales Automation',
     duration: 'Apr 2024 – Jan 2025',
     location: 'Dhaka, Bangladesh',
@@ -51,10 +55,11 @@ const jobs: Job[] = [
       'Administered secure, role-based user management and access control hierarchies across all sales tiers (RSD, ASD, TM, SO, Distributors).',
       'Conducted extensive onboarding programs and market field-visits to monitor application health and train system end-users.'
     ],
-    color: '#1b96ff', // Bright accent blue
+    color: '#1b96ff',
   },
   {
     company: 'ACI Limited',
+    companyUrl: 'https://www.aci-bd.com',
     role: 'Automation Support Officer',
     duration: 'Jul 2018 – Apr 2024',
     location: 'Dhaka, Bangladesh',
@@ -64,7 +69,7 @@ const jobs: Job[] = [
       'Collaborated closely with cross-functional sales and business development units to capture user requirements and diagnose application errors.',
       'Tracked system metrics and compliance protocols on-site to drive operational efficiency throughout regional market segments.'
     ],
-    color: '#475569', // Slate gray for historical foundation role
+    color: '#475569',
   }
 ]
 
@@ -73,10 +78,10 @@ export function ExperienceSection() {
     <section id="experience" className="section-padding py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4">
         
-        {/* Header */}
+        {/* Header - Dynamically stating 8 Years Total Experience */}
         <div className="text-center mb-16">
           <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-widest">
-            Career Journey
+            8 Years of Career Journey (2018 - Present)
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mt-2">
             Work <span className="text-blue-600 dark:text-blue-400">Experience</span>
@@ -114,8 +119,17 @@ export function ExperienceSection() {
                         <h3 className="font-extrabold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {job.role}
                         </h3>
-                        <div className="font-bold text-blue-600 dark:text-blue-400 text-sm">
-                          {job.company}
+                        {/* Company Name with live web redirection link */}
+                        <div className="mt-0.5">
+                          <a 
+                            href={job.companyUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="font-bold text-blue-600 dark:text-blue-400 text-sm hover:underline hover:text-blue-700 dark:hover:text-blue-300 inline-flex items-center gap-0.5"
+                          >
+                            {job.company}
+                            <span className="text-[10px] opacity-70 font-normal">↗</span>
+                          </a>
                         </div>
                       </div>
                       <span className="px-2.5 py-0.5 w-fit bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-md text-[11px] font-semibold tracking-wide uppercase flex-shrink-0">
