@@ -80,7 +80,7 @@ export function HeroSection() {
 
         {/* Title */}
         <h2 className="text-xl md:text-3xl font-semibold mb-6 text-blue-100 tracking-wide">
-          Digital Transformation Professional specialized - SFA - DMS
+          Digital Transformation Professional specialized.
         </h2>
 
        {/* Description */}
@@ -88,8 +88,6 @@ export function HeroSection() {
   Architecting agile, data-driven{' '}
   <strong className="text-white">Sales Automation</strong> and{' '}
   <strong className="text-white">Distribution Management Systems (DMS)</strong>. 
-  I bridge the gap between field sales operations and technical development to transform 
-  legacy workflows into enterprise-level solutions that drive measurable growth.
 </p>
 
         {/* CTA Buttons */}
