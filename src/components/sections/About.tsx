@@ -50,21 +50,21 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mt-2">
             About <span className="text-blue-600 dark:text-blue-400">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-blue-600 dark:bg-blue-500 mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full" />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           
           {/* Left Side: Visual Profile Card */}
           <div className="relative flex justify-center lg:sticky lg:top-24 w-full">
-            {/* Main container with extra spacing to completely prevent overlapping */}
-            <div className="relative w-full max-w-[360px] h-[380px] md:h-[400px]">
+            {/* Main container */}
+            <div className="relative w-full max-w-[360px] h-[390px] md:h-[410px]">
               
-              {/* Card Body - Picture/Avatar is STILL (No animation) */}
-              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#032d60] via-[#1a56db] to-[#1b96ff] flex flex-col items-center justify-center text-center p-6 shadow-[0_20px_50px_-12px_rgba(3,45,96,0.35)] relative z-10">
+              {/* Card Body - Content pushed upwards using pt-10/pt-12 and justify-start */}
+              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#032d60] via-[#1a56db] to-[#1b96ff] flex flex-col items-center justify-start text-center p-6 pt-10 md:pt-12 shadow-[0_20px_50px_-12px_rgba(3,45,96,0.35)] relative z-10">
                 
-                {/* Image Box - Kept static (still) as requested */}
-                <div className="w-28 h-28 md:w-32 md:h-32 mb-6 rounded-full border-4 border-white/20 overflow-hidden shadow-xl bg-blue-950/40 flex-shrink-0">
+                {/* Image Box - Kept static (still) & moved up slightly with smaller mb-4 */}
+                <div className="w-28 h-28 md:w-32 md:h-32 mb-4 rounded-full border-4 border-white/20 overflow-hidden shadow-xl bg-blue-950/40 flex-shrink-0">
                   <img 
                     src={profileImageUrl} 
                     alt="Dipta Saha" 
@@ -82,7 +82,7 @@ export function AboutSection() {
                   Dipta Saha
                 </h3>
                 
-                {/* Title - Fixed to Normal Case (Not Capital Letters) */}
+                {/* Title - Title Case (Not Capital Letters) */}
                 <p className="text-sm md:text-base font-medium text-blue-100/90 tracking-wide">
                   Digital Transformation Leader
                 </p>
@@ -101,8 +101,8 @@ export function AboutSection() {
                 </div>
               </div>
 
-              {/* Floating badge 2 – DMS Ecosystem (ANIMATED & MOVED FURTHER DOWN) */}
-              <div className="absolute -left-4 bottom-4 sm:-left-8 bg-white dark:bg-gray-800 rounded-2xl p-3 md:p-4 shadow-2xl border border-gray-100 dark:border-gray-700 max-w-[150px] md:max-w-[160px] z-20 animate-bounce [animation-duration:3.5s] transition-all hover:scale-105">
+              {/* Floating badge 2 – DMS Ecosystem (ANIMATED & MOVED LOWER DOWN TO PREVENT OVERLAP) */}
+              <div className="absolute -left-4 bottom-3 sm:-left-8 bg-white dark:bg-gray-800 rounded-2xl p-3 md:p-4 shadow-2xl border border-gray-100 dark:border-gray-700 max-w-[150px] md:max-w-[160px] z-20 animate-bounce [animation-duration:3.5s] transition-all hover:scale-105">
                 <div className="flex items-center gap-2.5">
                   <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-xl flex-shrink-0">
                     <TrendingUp className="text-green-600 dark:text-green-400" size={18} />
