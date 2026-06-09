@@ -63,7 +63,15 @@ export function HeroSection() {
           </svg>
         </div>
       </div>
-       {/* Name */}
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-28 text-center text-white">
+        {/* Status badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-8">
+          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          Sales Automation and Distribution Management System
+        </div>
+
+        {/* Name */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-4 leading-tight tracking-tight">
           Dipta{' '}
           <span
@@ -80,15 +88,18 @@ export function HeroSection() {
 
         {/* Title */}
         <h2 className="text-xl md:text-3xl font-semibold mb-6 text-blue-100 tracking-wide">
-          Digital Transformation Professional specialized.
+          Digital Transformation Professional
         </h2>
 
-       {/* Description */}
-<p className="max-w-3xl mx-auto text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed">
-  Architecting agile, data-driven{' '}
-  <strong className="text-white">Sales Automation</strong> and{' '}
-  <strong className="text-white">Distribution Management Systems (DMS)</strong>. 
-</p>
+        {/* Description */}
+        <p className="max-w-3xl mx-auto text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed">
+          Architecting intelligent Salesforce solutions with{' '}
+          <strong className="text-white">Apex</strong>,{' '}
+          <strong className="text-white">Flow Builder</strong>, and{' '}
+          <strong className="text-white">Lightning Web Components</strong>. I transform complex
+          business processes into elegant CRM automation that drives measurable growth and
+          system integrations.
+        </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
