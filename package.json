@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "vite build",
+    "start": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.168.22",
+    "@tanstack/react-start": "1.167.41",
+    "@tanstack/router-plugin": "1.167.22",
+    "clsx": "2.1.1",
+    "lucide-react": "0.576.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "tailwind-merge": "3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.2.2",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.15",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.2.0",
+    "nitro": "latest",
+    "tailwindcss": "4.2.2",
+    "tailwindcss-animate": "1.0.7",
+    "typescript": "5.9.3",
+    "vite": "7.3.3",
+    "vite-tsconfig-paths": "6.1.1"
+  }
+}
