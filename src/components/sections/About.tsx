@@ -36,12 +36,14 @@ const recentMilestones = [
   'Eliminating operational bottlenecks to optimize field-force performance metrics'
 ]
 
-// --- Component Updated ---
 export function AboutSection() {
+  // Converted Google Drive sharing link to a direct rendering image source URL
+  const profileImageUrl = "https://lh3.googleusercontent.com/d/1951f0TDk9QzxVeQlD74V03TtrTG5s6Z3"
+
   return (
     <section id="about" className="section-padding py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header (Kept Same) */}
+        {/* Header */}
         <div className="text-center mb-16">
           <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-widest">
             Who I Am
@@ -53,56 +55,71 @@ export function AboutSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Side: Refined Visual Profile Card */}
-          <div className="relative flex justify-center lg:sticky lg:top-24">
-            <div className="relative w-80 h-80">
-              {/* Card Body - Softened Gradient & Enhanced Shadow */}
-              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#032d60] via-[#1a56db] to-[#1b96ff] flex items-center justify-center shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)]">
-                <div className="text-white text-center px-6">
-                  {/* Replaced Briefcase with Profile Avatar Placeholder */}
-                  <div className="text-7xl mb-4 p-4 rounded-full border-4 border-white/20 inline-block">
-                    👨‍💻
-                  </div>
-                  
-                  {/* Name (Larger & Prominent) */}
-                  <div className="text-3xl md:text-4xl font-extrabold tracking-tight">Dipta Saha</div>
-                  
-                  {/* Professional Title (Stylized for Readability) */}
-                  <div className="mt-2 text-sm font-semibold tracking-wide text-blue-100/90 uppercase [word-spacing:0.25em]">
-                    Digital Transformation Leader
-                  </div>
+          
+          {/* Left Side: Visual Profile Card (Fixed overlapping bugs) */}
+          <div className="relative flex justify-center lg:sticky lg:top-24 w-full">
+            {/* Added extra horizontal padding (px-6/md:px-12) so floating badges don't clip text boundaries */}
+            <div className="relative w-full max-w-[360px] h-[380px] md:h-[400px] px-6 sm:px-0">
+              
+              {/* Card Body with Softened Gradient & Drop Shadow */}
+              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-[#032d60] via-[#1a56db] to-[#1b96ff] flex flex-col items-center justify-center text-center p-6 shadow-[0_20px_50px_-12px_rgba(3,45,96,0.35)] relative z-10">
+                
+                {/* Profile Image with float animation */}
+                <div className="w-28 h-28 md:w-32 md:h-32 mb-6 rounded-full border-4 border-white/20 overflow-hidden shadow-inner bg-blue-950/40 flex-shrink-0 animate-float">
+                  <img 
+                    src={profileImageUrl} 
+                    alt="Dipta Saha Profile Picture" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    onError={(e) => {
+                      // Fallback emoji if Google Drive blocks request headers
+                      e.currentTarget.style.display = 'none';
+                      if(e.currentTarget.parentElement) e.currentTarget.parentElement.innerText = '👨‍💻';
+                    }}
+                  />
                 </div>
+                
+                {/* Name Layout Layer */}
+                <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white mb-2 drop-shadow-sm">
+                  Dipta Saha
+                </h3>
+                
+                {/* Subtitle - Separated nicely with clean structural font values */}
+                <p className="text-xs md:text-sm font-bold tracking-widest text-blue-100 uppercase leading-snug max-w-[240px]">
+                  Digital Transformation Leader
+                </p>
               </div>
               
-              {/* Floating badge – Focus area */}
-              <div className="absolute -right-6 top-8 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-2xl border border-gray-100 dark:border-gray-700 max-w-[160px] transition-colors duration-300">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex-shrink-0">
-                    <Target className="text-blue-600 dark:text-blue-400" size={20} />
+              {/* Floating badge – Sales Automation Specialist */}
+              <div className="absolute -right-4 top-10 sm:-right-8 bg-white dark:bg-gray-800 rounded-2xl p-3 md:p-4 shadow-xl border border-gray-100 dark:border-gray-700 max-w-[150px] md:max-w-[160px] z-20 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex-shrink-0">
+                    <Target className="text-blue-600 dark:text-blue-400" size={18} />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900 dark:text-white text-xs leading-tight">Sales Automation</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-[10px] mt-0.5">Specialist</div>
+                    <h4 className="font-bold text-gray-900 dark:text-white text-xs leading-tight">Sales Automation</h4>
+                    <span className="text-gray-500 dark:text-gray-400 text-[10px] block mt-0.5">Specialist</span>
                   </div>
                 </div>
               </div>
 
-              {/* Floating badge – Domain expertise */}
-              <div className="absolute -left-6 bottom-12 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-2xl border border-gray-100 dark:border-gray-700 max-w-[160px] transition-colors duration-300">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-green-100 dark:bg-green-900/30 rounded-xl flex-shrink-0">
-                    <TrendingUp className="text-green-600 dark:text-green-400" size={20} />
+              {/* Floating badge – DMS Ecosystem Optimization */}
+              <div className="absolute -left-4 bottom-10 sm:-left-8 bg-white dark:bg-gray-800 rounded-2xl p-3 md:p-4 shadow-xl border border-gray-100 dark:border-gray-700 max-w-[150px] md:max-w-[160px] z-20 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-2.5">
+                  <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-xl flex-shrink-0">
+                    <TrendingUp className="text-green-600 dark:text-green-400" size={18} />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900 dark:text-white text-xs leading-tight">DMS Ecosystem</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-[10px] mt-0.5">Optimization</div>
+                    <h4 className="font-bold text-gray-900 dark:text-white text-xs leading-tight">DMS Ecosystem</h4>
+                    <span className="text-gray-500 dark:text-gray-400 text-[10px] block mt-0.5">Optimization</span>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
 
-          {/* Right Side (Content Unchanged but with Dark Mode Transition) */}
+          {/* Right Side: Bio & Content Focus */}
           <div className="transition-opacity duration-300">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Bridging Field Sales Operations & Technical Development
@@ -160,6 +177,7 @@ export function AboutSection() {
               </ul>
             </div>
           </div>
+
         </div>
       </div>
     </section>
