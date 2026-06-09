@@ -63,15 +63,7 @@ export function HeroSection() {
           </svg>
         </div>
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-28 text-center text-white">
-        {/* Status badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium mb-8">
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Available for Salesforce Projects
-        </div>
-
-        {/* Name */}
+       {/* Name */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-4 leading-tight tracking-tight">
           Dipta{' '}
           <span
