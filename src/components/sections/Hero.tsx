@@ -88,18 +88,17 @@ export function HeroSection() {
 
         {/* Title */}
         <h2 className="text-xl md:text-3xl font-semibold mb-6 text-blue-100 tracking-wide">
-          Salesforce Automation Developer
+          Digital Transformation Professional specialized - SFA - DMS
         </h2>
 
-        {/* Description */}
-        <p className="max-w-3xl mx-auto text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed">
-          Architecting intelligent Salesforce solutions with{' '}
-          <strong className="text-white">Apex</strong>,{' '}
-          <strong className="text-white">Flow Builder</strong>, and{' '}
-          <strong className="text-white">Lightning Web Components</strong>. I transform complex
-          business processes into elegant CRM automation that drives measurable growth and
-          system integrations.
-        </p>
+       {/* Description */}
+<p className="max-w-3xl mx-auto text-base md:text-xl text-blue-100/90 mb-10 leading-relaxed">
+  Architecting agile, data-driven{' '}
+  <strong className="text-white">Sales Automation</strong> and{' '}
+  <strong className="text-white">Distribution Management Systems (DMS)</strong>. 
+  I bridge the gap between field sales operations and technical development to transform 
+  legacy workflows into enterprise-level solutions that drive measurable growth.
+</p>
 
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
